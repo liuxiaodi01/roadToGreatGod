@@ -1,0 +1,24 @@
+.logs-form {
+  background-image: linear-gradient(0deg, #0ba360 0%, #3cba92 100%);
+  padding: 10px;
+  margin: 10px 0;
+}
+.logs-item-title {
+  font-weight: bold;
+}
+.logs-form-item {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+.logs-form-item label {
+  padding-right: 10px;
+}
+.logs-form-item input {
+  flex: auto;
+}
+.logs-form-item button {
+  flex: auto;
+  border: none;
+}

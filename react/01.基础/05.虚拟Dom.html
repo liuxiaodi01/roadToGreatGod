@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虚拟Dom</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const list = ["小明", "小王", "小张"];
+      const ul = (
+        <ul>
+          {list.map((v) => (
+            <li key={v}>{v}</li>
+          ))}
+        </ul>
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(ul);
+      /**
+       *  在React中我们操作的元素叫react元素，并不是真正的原生dom原生
+       *  react将react的dom与原生dom进行映射，虽然操作的是react的dom，但是这些操作最终在原生dom中体现
+       *  每当我们调用root.render()时，页面就会重新渲染
+       *    react通过diffing算法，将新的原生和旧的元素进行比较
+       *    通过比较找到发送变化的元素，并且只对方式变化的元素进行修改，没有变化的不予处理
+       *    默认按照顺序进行比较 ,设置key避免渲染问题
+       */
+    </script>
+  </body>
+</html>

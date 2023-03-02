@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsx</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 通过bable来将jsx代码转换 -->
+    <script type="text/babel">
+      /**
+       *  jsx注意事项：
+       *      1.jsx不是字符串，不要加引号
+       *      2.jsx中html小写开头,react组件大写开头
+       *      3.在jsx中使用{}嵌入表达式
+       *      4.jsx中有且只有一个根标签
+       *      5.jsx中必须正确结束
+       *      6.jsx中可在标签中设置属性
+       */
+      const button = (
+        <button
+          class="btn"
+          onClick={() => alert("你好啊")}
+          style={{ backgroundColor: "red" }}
+        >
+          我是按钮
+        </button>
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(button);
+    </script>
+  </body>
+</html>

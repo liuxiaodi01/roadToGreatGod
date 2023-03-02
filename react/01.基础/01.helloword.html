@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hello world</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // 通过react向页面添加一个div
+      /**
+       *  React.createElement()
+       *    - 用来创建一个React元素
+       *    - 参数：
+       *        1.元素名
+       *        2.元素中的属性
+       *        3.元素的子元素(内容)
+       */
+      const div = React.createElement("div", {}, "我是react创建的div");
+      // 创建根元素存放react元素
+      const app = ReactDOM.createRoot(document.getElementById("app"));
+      app.render(div);
+      /**
+       * 提问：为什么创建dom元素不是使用ReactDOM 而是使用 React.createElement
+       *  react提供的是虚拟dom，只有在操作dom才使用ReactDOM
+       *  React.createElement创建的是react的dom而不是真正的dom
+       */
+    </script>
+  </body>
+</html>

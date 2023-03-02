@@ -1,0 +1,12 @@
+.app {
+  width: 500px;
+  height: 500px;
+  background-color: #ccc;
+  margin: 100px auto;
+}
+
+.app button {
+  width: 100px;
+  margin: 5px;
+  height: 30px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsx渲染列表</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const list = Array(10)
+        .fill(true)
+        .map((item, index) => ({
+          name: "小明" + index,
+          age: (index + Math.random() * 100).toFixed(0) + "岁",
+          sex: index % 2 === 0 ? "男" : "女",
+          state: index % 3 === 0 ? "已婚" : "未婚",
+        }));
+      const table = (
+        <table width="500">
+          <caption>
+            <th>婚姻查询</th>
+          </caption>
+          <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>婚姻状态</th>
+          </tr>
+          {setTr(list)}
+        </table>
+      );
+      function setTr(list) {
+        return list.map((v) => {
+          return (
+            <tr align="center">
+              <td>{v.name}</td>
+              <td>{v.age}</td>
+              <td>{v.sex}</td>
+              <td>{v.state}</td>
+            </tr>
+          );
+        });
+      }
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(table);
+    </script>
+  </body>
+</html>

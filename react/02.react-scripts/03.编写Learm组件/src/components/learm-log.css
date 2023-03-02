@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 设置容器样式 */
+.learn-log {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  background-image: linear-gradient(0deg, #cfd9df 0%, #e2ebf0 100%);
+  margin: 10px;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.learn-log .date {
+  flex: 0 0 60px;
+  height: 60px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+.learn-log .date .month {
+  background-color: red;
+  color: #fff;
+  padding: 3px 0;
+  font-weight: 550;
+}
+.learn-log .date .day {
+  height: calc(100% - 27px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-log .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.learn-log .container .title {
+  margin-bottom: 5px;
+  color: red;
+}

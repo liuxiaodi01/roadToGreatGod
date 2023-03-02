@@ -1,0 +1,23 @@
+.date {
+  flex: 0 0 60px;
+  height: 60px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+.date .month {
+  background-color: red;
+  color: #fff;
+  padding: 3px 0;
+  font-weight: 550;
+}
+.date .day {
+  height: calc(100% - 27px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
